@@ -1,0 +1,2 @@
+iverilog -o sim a12_sol.v a12_tb.v
+vvp sim
