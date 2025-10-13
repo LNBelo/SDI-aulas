@@ -1,2 +1,11 @@
-iverilog -o sim a12_sol.v a12_tb.v
-vvp sim
+# Compilação para verificação de erro
+iverilog file.v
+
+# Para o testebench (simulação) é criado um arquivo de saida (-o) .vpp
+iverilog -o sim.vvp file.v tb_file.v
+
+# Executa a simulação e cria o arquivo .vcd usado no gtkwave
+vvp sim.vvp
+
+# Execução da simulação no gtkwave
+gtkwave sim.vcd
